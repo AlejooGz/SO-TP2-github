@@ -5,6 +5,7 @@
 
 int main() {
 	int status;
+	char* argv[] = {"ls", "-ltr", NULL};
 
 	if (fork() != 0) /* Código del padre */
 	{
@@ -13,6 +14,6 @@ int main() {
 	}
 	else
 		/* Código del hijo */
-		execl("/usr/bin/firefox", "",NULL);
+		execv("/bin/ls", argv);
 	return 0;
 }
