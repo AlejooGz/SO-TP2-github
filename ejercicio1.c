@@ -5,9 +5,9 @@
 
 int cant = 0;
 
-void manejador (int num){
+void manejador (int num) {
 
-	printf("Recibi señal\n");
+	printf("Se recibio SIGINT\n");
 	cant++;
 
 	if(cant == 3){
